@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCafe - Drinks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--all the links-->
+    <link href="index.html">
+    <link href="menu.html">
+    <link href="food.html">
+    <link href="deals.html">
+    <link href="books.html">
+    <link href="about.html">
+    <link href="contact.html">
+    <!--style that only applies to this page-->
+    <style>
+        /* basics */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f2ec;
+        }
+
+        header {
+            background-color: #3a2c29;
+            color: white;
+        }
+
+        .menu-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f2ec;
+        }
+
+        .menu-title {
+            color: #3a2c29;
+            margin-bottom: 2rem;
+        }
+
+        .menu-category h2 {
+            color: #3a2c29;
+            margin: 1rem 0;
+        }
+
+        .menu-item {
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            color: #3a2c29;
+        }
+
+        .menu-item p {
+            color: #3a2c29;
+        }
+
+        footer {
+            background-color: #3a2c29;
+            color: white;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .menu-section {
+                padding: 30px 15px;
+            }
+        }
+
+        #bookshelf {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #3e2723;
+            padding: 20px;
+        }
+
+        .book {
+            width: 100px;
+            /* book width */
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+        }
+
+        #details {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .book {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #bookshelf {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book {
+                width: 100px;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: calc(100vh - 60px);
+        }
+
+
+        #details {
+            display: none;
+            /* will show via js */
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        #details h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #details p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        #details a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #008CBA;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bookcafe"><a href="index.html">BookCafe</a></div>
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="menu.html">Menu</a>
+                    <div class="dropdown-options">
+                        <a href="#">Drinks</a>
+                        <a href="food.html">Food</a>
+                    </div>
+                </li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--main foods available-->
+        <section class="menu-section">
+            <h1 class="menu-title">Our available food:</h1>
+            <div class="menu-category">
+                <div class="menu-item">
+                    <h3>Eggs with Canadian Sausage</h3>
+                    <p>Eggs with Canadian sausage is a hearty and satisfying breakfast dish that combines the rich
+                        flavors of eggs and the distinct taste of Canadian sausage, often referred to as Canadian bacon.
+                    </p>
+                </div>
+                <div class="menu-item">
+                    <h3>Omelette</h3>
+                    <p>An omelette is a classic dish made by beating eggs and then cooking them in a frying pan until
+                        they're firm, often folded around a filling. The exterior is golden and slightly crispy, while
+                        the interior remains soft and fluffy. This versatile dish can be enjoyed plain or with various
+                        fillings, making it a breakfast favorite around the world.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Omelette with Vegetables</h3>
+                    <p>This variation of the traditional omelette includes a mix of fresh vegetables such as bell
+                        peppers, onions, spinach, mushrooms, and tomatoes.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Omelette with Cheese</h3>
+                    <p>A cheese omelette is a sumptuous version of the basic omelette, filled or topped with one or more
+                        types of cheese, such as cheddar, mozzarella, or feta. As the omelette cooks, the cheese melts,
+                        creating a creamy, gooey texture and a rich, savory flavor that perfectly complements the eggs.
+                    </p>
+                </div>
+                <div class="menu-item">
+                    <h3>Oatmeal</h3>
+                    <p>Oatmeal is a warm, comforting cereal made from oats. It is often cooked in milk or water and can
+                        be served sweet or savory.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Toaster Bread</h3>
+                    <p>Toaster bread refers to slices of bread that are perfect for toasting, turning golden brown and
+                        crispy when heated. It can be made from various types of bread, including white, whole wheat,
+                        rye, or sourdough.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Club Sandwich</h3>
+                    <p>A club sandwich is a type of sandwich traditionally made from toasted bread, sliced cooked
+                        poultry, ham or fried bacon, lettuce, tomato, and mayonnaise. It's often cut into quarters and
+                        held together by cocktail sticks. </p>
+                </div>
+                <div class="menu-item">
+                    <h3>Vegan Sandwich</h3>
+                    <p>A vegan sandwich is a plant-based version of the traditional sandwich, free from animal products.
+                        It often includes ingredients like hummus, avocado, fresh or grilled vegetables, vegan cheeses,
+                        and meat substitutes, all sandwiched between slices of vegan bread. </p>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h2>Teas</h2>
+                <div class="menu-item">
+                    <h3>Green Tea</h3>
+                    <p>Nothing wrong with a simple green tea, in fact that's when life tends to be going the healthiest.
+                        Or unhealthiest.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chamomile Tea</h3>
+                    <p>Tastes terrible, but it's also terribly healthy.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Black Tea</h3>
+                    <p>Yes, black as your heart, don't worry about it. Add bitter to the mix and there you have it.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Earl Grey</h3>
+                    <p>If you want to cosplay as a posh british person, you certainly came to the right place.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--virtual bookshelf-->
+        <div id="bookshelf">
+            <div class="book" onclick="showDetails(book1)">
+                <img src="https://m.media-amazon.com/images/I/61dEdpy80UL.jpg" alt="The Fourth Wing">
+                <p>The Fourth Wing</p>
+            </div>
+            <div class="book" onclick="showDetails(book2)">
+                <img src="https://m.media-amazon.com/images/I/812eE1lO0dL._AC_UF1000,1000_QL80_.jpg"
+                    alt="Atomic Habits">
+                <p>Atomic Habits</p>
+            </div>
+            <div class="book" onclick="showDetails(book3)">
+                <img src="https://images2.penguinrandomhouse.com/cover/9781984822178" alt="Normal People">
+                <p>Normal People</p>
+            </div>
+            <div class="book" onclick="showDetails(book4)">
+                <img src="https://images.booksense.com/images/191/195/9781461195191.jpg" alt="Anna Karenina">
+                <p>Anna Karenina</p>
+            </div>
+        </div>
+        <!--will edit via js so it will become visible-->
+        <div id="details" class="hidden">
+            <h2 id="book-title">Book Title</h2>
+            <p id="book-author">by Author Name</p>
+            <p id="book-description">Why not right</p>
+            <a href="#" id="book-link">Read More</a>
+        </div>
+
+    </main>
+
+    <!--footer section-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BookCafe</h3>
+                <p>Appreciate the little things.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <!--social media links-->
+                <h4>Follow Us</h4>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en"
+                            class="fa fa-brands fa-instagram"></a></li>
+                    <li><a href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+                            class="fa fa-brands fa-yelp"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BookCafe | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        //all the book blurbs
+        var book1 = {
+            title: "Fourth Wing",
+            author: "Rebecca Yarros",
+            description: "A dystopian fantasy with dragons, love, and a whole lot of corny. It's basically booktok's newest obsession.",
+            link: "https://www.supersummary.com/fourth-wing/summary/"
+        };
+
+        var book2 = {
+            title: "Atomic Habits",
+            author: "James Clear",
+            description: "This particular read seems to be all the rage, which is odd considering it's a self-help book. Kudos to James.",
+            link: "https://www.blinkist.com/en/books/atomic-habits-en#:~:text=Brief%20summary,lead%20to%20significant%20personal%20growth."
+        };
+
+        var book3 = {
+            title: "Normal People",
+            author: "Sally Rooney",
+            description: "This book even boasts a movie to its name. It's a Sally Rooney novel. You know it's good.",
+            link: "https://www.blinkist.com/en/books/normal-people-en#:~:text=Normal%20People%20(2018)%20tells%20the,their%20feelings%20for%20one%20another."
+        };
+
+        var book4 = {
+            title: "Anna Karenina",
+            author: "Leo Tolstoy",
+            description: "An absolute classic, are you even a reader if you haven't devoured this one yet?",
+            link: "https://www.sparknotes.com/lit/anna/summary/"
+        };
+
+        //as aforementioned in the css, this modifies html so that the book description is visible (diff depending on the book)
+        function showDetails(book) {
+            document.getElementById('book-title').innerText = book.title || 'No Title';
+            document.getElementById('book-author').innerText = book.author ? 'by ' + book.author : 'Author Unknown';
+            document.getElementById('book-description').innerText = book.description || 'No Description Available';
+            document.getElementById('book-link').href = book.link || '#';
+
+            //show the details
+            var detailsBox = document.getElementById('details');
+            detailsBox.classList.remove('hidden');
+            detailsBox.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

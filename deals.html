@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookCafe - Deals</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!--all the links-->
+  <link href="index.html">
+  <link href="menu.html">
+  <link href="drinks.html">
+  <link href="food.html">
+  <link href="books.html">
+  <link href="about.html">
+  <link href="contact.html">
+  <!--style that only applies to this page-->
+  <style>
+    .deals-parallax-header {
+      background-image: url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWVzdGhldGljJTIwY2FmZXxlbnwwfHwwfHx8MA%3D%3D');
+      min-height: 300px;
+      color: #fff;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deals-title {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .deal-item {
+      background-color: #fff;
+      color: #333 !important;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .deal-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .deal-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .deal-description {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .deal-price {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .deal-link {
+      text-decoration: none;
+      color: #260e04;
+      background-color: #b08e6b;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .deal-link:hover {
+      background-color: #9c7a56;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .deals-parallax-header {
+        background-attachment: scroll;
+      }
+
+      .deals-title {
+        font-size: 2rem;
+      }
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 4%;
+      border: 1px solid #888;
+      width: 40%;
+      border-radius: 5px;
+      color: #260e04;
+    }
+
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .modal-content {
+        width: 40%;
+        margin: 5% auto;
+      }
+    }
+
+    #pricing-section {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #260e04;
+    }
+
+    .price-item {
+      background: #fff;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .price-item {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-container {
+        flex-direction: column;
+      }
+
+      .price-item {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-bookcafe"><a href="index.html">BookCafe</a></div>
+      <ul class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <div class="dropdown-options">
+            <a href="drinks.html">Drinks</a>
+            <a href="food.html">Food</a>
+          </div>
+        </li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--deals parallax-->
+    <div class="deals-parallax-header">
+      <h1 class="deals-title">Exclusive Deals</h1>
+    </div>
+
+    <section class="deals-grid">
+      <div class="deal-item">
+        <h2 class="deal-title">Jane Austen</h2>
+        <p class="deal-description">Get access to Jane Austen's greatest works for the duration of your stay at BookCafe
+          for FREE with purchase of a table for 5+ hours.</p>
+        <p class="deal-price">min. 50,000</p>
+        <a href="\" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Dan Brown</h2>
+        <p class="deal-description">Get access to Dan Brown's world-reknown Da Vinci Code for the duration of your stay
+          at BookCafe for FREE with purchase of a 4 person table for 5+ hours.</p>
+        <p class="deal-price">min. 80,000</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Leo Tolstoy</h2>
+        <p class="deal-description">Get a FREE copy of any book of Leo Tolstoy's with proof of spending 500+ hours at
+          BookCafe. Basically, you get a free book. Girl math.</p>
+        <p class="deal-price">depends</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Stephen King</h2>
+        <p class="deal-description">Get a signed copy of any of Stephen King's novels with a purchase of 300000+ within
+          2 hours.</p>
+        <p class="deal-price">min. 300 0000</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Summer Reading Challenge</h2>
+        <p class="deal-description">Show proof of reading for 200+ hours to get a free dessert of your choice. Offer
+          valid until July 21st, 2024.</p>
+        <p class="deal-price">hours and hours of reading</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">No-Sleep Challenge</h2>
+        <p class="deal-description">Stay in the café for 24+ hours consecutively without sleeping to get a free 5 hour
+          stay at a 2-person booth.</p>
+        <p class="deal-price">24 hours must be paid for</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Rick Riordan Ritzes</h2>
+        <p class="deal-description">Come dressed as any Percy Jackson character for a chance to win his entire
+          collection.</p>
+        <p class="deal-price">lots of creativity</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+      <div class="deal-item">
+        <h2 class="deal-title">Bring A Friend</h2>
+        <p class="deal-description">Bring a friend to BookCafe 3 times to get a free 3 hour slot at a 2-person booth.
+        </p>
+        <p class="deal-price">min. 3x 30 000 purchase stay</p>
+        <a href="deal-details.html" class="deal-link">View</a>
+      </div>
+    </section>
+
+    <!--the pricing section-->
+    <section class="parallax" id="pricing-section" style="background-image: url('media/14.jpg');">
+      <div class="section-content pricing-container">
+        <div class="price-item">
+          <h3>Stay & Food</h3>
+          <p class="price">80 000 UZS / 5 hours</p>
+          <p class="description">a 4 person table with access to all materials, wi-fi, etc.</p>
+        </div>
+        <div class="price-item">
+          <h3>Stay & Food</h3>
+          <p class="price">50 000 UZS / 5 hours</p>
+          <p class="description">a 2 person booth with access to wi-fi for the duration of your stay.</p>
+        </div>
+        <div class="price-item">
+          <h3>Stay & Food</h3>
+          <p class="price">120 000 / 10 hours</p>
+          <p class="description">a 4 person booth with access to all materials, free wi-fi, price lowered per hour due
+            to length of stay.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--footer section-->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BookCafe</h3>
+        <p>Appreciate the little things.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <!--social media links-->
+        <h4>Follow Us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en" class="fa fa-brands fa-instagram"></a></li>
+          <li><a
+              href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+              class="fa fa-brands fa-yelp"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 BookCafe | All rights reserved</p>
+    </div>
+  </footer>
+
+  <!--modal-->
+  <div id="dealModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2 id="modalDealTitle">Deal Title</h2>
+      <p id="modalDealDescription">Here is a more detailed description of the deal...</p>
+    </div>
+  </div>
+
+  <script>
+    //this gets the modal
+    var modal = document.getElementById("dealModal");
+
+    //this gets the buttons to open the modal
+    var viewDealBtns = document.querySelectorAll(".deal-link");
+
+    //this retrieves the span element to close the modal
+    var span = document.getElementsByClassName("close-button")[0];
+
+    //this essentially says when the user clicks the button, the modal should open
+    viewDealBtns.forEach(function (btn) {
+      btn.addEventListener('click', function (event) {
+        //this prevents default link
+        event.preventDefault();
+
+        var dealTitle = this.closest('.deal-item').querySelector('.deal-title').textContent;
+        var dealDescription = this.closest('.deal-item').querySelector('.deal-description').textContent;
+
+        //setting up modal content
+        document.getElementById('modalDealTitle').textContent = dealTitle;
+        document.getElementById('modalDealDescription').textContent = dealDescription;
+
+        modal.style.display = "block";
+      });
+    });
+
+    //when the user clicks on the spam the modal should close
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+  </script>
+</body>
+
+</html>

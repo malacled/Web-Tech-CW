@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookCafe - Books</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!--all the links-->
+  <link href="index.html">
+  <link href="menu.html">
+  <link href="drinks.html">
+  <link href="food.html">
+  <link href="deals.html">
+  <link href="about.html">
+  <link href="contact.html">
+  <style>
+    .carousel {
+      width: 100%;
+      overflow-x: scroll;
+      padding: 30px;
+      padding-top: 80px;
+      position: relative;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .carousel__container {
+      white-space: nowrap;
+      margin: 70px 0px;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .categories__title {
+      color: white;
+      font-size: 28px;
+      position: absolute;
+      padding-left: 30px;
+    }
+
+    .carousel-item {
+      width: 200px;
+      height: 250px;
+      border-radius: 20px;
+      background-color: #95bcd6;
+      overflow: hidden;
+      margin-right: 10px;
+      margin-top: 70px;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-transition: 1000ms all;
+      transition: 1000ms all;
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+      position: relative;
+    }
+
+    .carousel-item:hover~.carousel-item {
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel-item {
+      opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+      opacity: 1;
+    }
+
+    .carousel-item__img {
+      width: 200px;
+      height: 250px;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    .carousel-item__details {
+      font-size: 10px;
+      opacity: 0;
+      -webkit-transition: 450ms opacity;
+      transition: 450ms opacity;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .carousel-item__details:hover {
+      opacity: 1;
+    }
+
+    .carousel-item__details span {
+      font-size: 0.9rem;
+      color: #2ecc71;
+    }
+
+    .carousel-item__details .controls {
+      padding-top: 180px;
+    }
+
+    .carousel-item__details .carousel-item__details--title,
+    .carousel-item__details--subtitle {
+      color: #fff;
+      margin: 5px 0;
+    }
+
+    footer {
+      clear: both;
+      width: 100%;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .footer-section h4 {
+      margin-top: 0;
+    }
+
+    .footer-links a,
+    .socials a {
+      color: white;
+      text-decoration: none;
+      padding: 2px 0;
+    }
+
+    .footer-links a:hover,
+    .socials a:hover {
+      color: #f8c102;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .bookshelf {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-image: url('wood-texture.jpg');
+      background-size: cover;
+    }
+
+    .book {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      max-height: 300px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-bookcafe"><a href="index.html">BookCafe</a></div>
+      <ul class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="menu.html">Menu</a>
+          <div class="dropdown-options">
+            <a href="drinks.html">Drinks</a>
+            <a href="food.html">Food</a>
+          </div>
+        </li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--the last borrowed books section-->
+    <section class="carousel">
+      <h2 class="categories__title">Last Borrowed:</h2>
+      <div class="carousel__container">
+        <div class="carousel-item">
+          <img class="carousel-item__img"
+            src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1516292829l/36687215.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Out of Left Field</h5>
+            <h6 class="carousel-item__details--subtitle">By Kris Hui Lee</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/610Fte6o98L.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Operation Prom Date</h5>
+            <h6 class="carousel-item__details--subtitle">By Cindi Madsen</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/61d39gJ-6dL.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">I <del>Love</del> Hate You, Fuller James</h5>
+            <h6 class="carousel-item__details--subtitle">By Kelly Anne Blount</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://m.media-amazon.com/images/I/41pwKHQYROL.SX316.SY316.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Four Days of You and Me</h5>
+            <h6 class="carousel-item__details--subtitle">By Miranda Kenneally</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/81RZe5Zir+L.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Even If I Fall</h5>
+            <h6 class="carousel-item__details--subtitle">By Abigail Johnson</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/518JHpUL2FL.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">10 Blind Dates</h5>
+            <h6 class="carousel-item__details--subtitle">By Ashley Elston</h6>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="carousel-item__img" src="https://images-na.ssl-images-amazon.com/images/I/71+nP8c5R9L.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">13 Gifts</h5>
+            <h6 class="carousel-item__details--subtitle">By Wendy Mass</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/When_you_reach_me.jpg/220px-When_you_reach_me.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">When You Reach Me</h5>
+            <h6 class="carousel-item__details--subtitle">By Rebecca Stead</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img"
+            src="https://images-na.ssl-images-amazon.com/images/I/51CKC2l0UhL._SY445_QL70_ML2_.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Paper Hearts</h5>
+            <h6 class="carousel-item__details--subtitle">By Ali Novak</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="carousel-item__img"
+            src="https://images-na.ssl-images-amazon.com/images/I/51in6gTMWnL._SX331_BO1,204,203,200_.jpg" />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Heartbreakers</h5>
+            <h6 class="carousel-item__details--subtitle">By Ali Novak</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="bookshelf">
+      <img
+        src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781398516656/maybe-in-another-life-9781398516656_hr.jpg"
+        alt="Book Title 1" class="book">
+      <img src="https://www.creatopy.com/blog/wp-content/uploads/2020/08/The-Hobbit-Book-Cover-441x600.jpg"
+        alt="Book Title 2" class="book">
+      <img src="https://www.creatopy.com/blog/wp-content/uploads/2020/08/The-Little-Prince-Book-Cover-389x600.jpg"
+        alt="Book Title 3" class="book">
+      <img
+        src="https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg"
+        alt="Book Title 4" class="book">
+      <img src="https://www.creatopy.com/blog/wp-content/uploads/2020/08/The-Godfather-Book-Cover-399x600.jpg"
+        alt="Book Title 5" class="book">
+      <img src="https://images.penguinrandomhouse.com/cover/9780525563693" alt="Book Title 6" class="book">
+      <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230837/pj-3-titans-curse-cover-LG.jpg"
+        alt="Book Title 7" class="book">
+      <img src="https://m.media-amazon.com/images/I/51PU+rBEnjL.jpg" alt="Book Title 8" class="book">
+      <img
+        src="https://resizing.flixster.com/oMZq4JnYQfAF3a267ONjfKKlzxg=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzcxNTI1NGVhLWU5YWQtNDkwYy1hMjUyLTZjMDEzOTg3NzEyZS5qcGc="
+        alt="Book Title 9" class="book">
+      <img src="https://cdn.kobo.com/book-images/7fdaae96-91e7-4c9c-a534-6eb3e725c683/1200/1200/False/malibu-rising.jpg"
+        alt="Book Title 10" class="book">
+      <img src="https://fangirlfury.files.wordpress.com/2021/11/33289074._sy475_.jpg" alt="Book Title 11" class="book">
+      <img
+        src="https://ew.com/thmb/NMQ9MdtZLK0vufrWS0J_uHMEyuE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Carrie-Soto-Is-Back-2000-b2c67377b092476e90d3c49f1fd53103.jpg"
+        alt="Book Title 12" class="book">
+      <img src="https://thereadingdate.com/wp-content/uploads/sites/65/2014/10/image001.jpg" alt="Book Title 13"
+        class="book">
+      <img
+        src="https://i0.wp.com/natashaisabookjunkie.com/wp-content/uploads/losing-hope_new-2.jpg?fit=1399%2C2173&ssl=1"
+        alt="Book Title 14" class="book">
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BookCafe</h3>
+        <p>Appreciate the little things.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <!--social media links-->
+        <h4>Follow Us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en" class="fa fa-brands fa-instagram"></a></li>
+          <li><a
+              href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+              class="fa fa-brands fa-yelp"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 BookCafe | All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

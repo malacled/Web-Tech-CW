@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookCafe - Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!--all the links-->
+  <link href="index.html">
+  <link href="drinks.html">
+  <link href="food.html">
+  <link href="deals.html">
+  <link href="books.html">
+  <link href="about.html">
+  <link href="contact.html">
+  <!--style that only applies to this page-->
+  <style>
+    #menu-page {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .menu-title {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .menu-opt {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0;
+    }
+
+    .menu-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-img {
+      width: 100%;
+      height: 150px;
+      /* Set a fixed height or use object-fit to maintain aspect ratio */
+      object-fit: cover;
+    }
+
+    .item-details {
+      padding: 15px;
+      background-color: white;
+    }
+
+    .item-price {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .item-desc {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    /* for responsiveness */
+    @media (max-width: 600px) {
+      .menu-opt {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--header section-->
+  <header>
+    <nav>
+      <div class="nav-bookcafe"><a href="index.html">BookCafe</a></div>
+      <ul class="nav-items">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Menu</a>
+          <div class="dropdown-options">
+            <a href="drinks.html">Drinks</a>
+            <a href="food.html">Food</a>
+          </div>
+        </li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--main content-->
+  <main>
+    <div id="menu-page">
+      <h1 class="menu-title">Menu</h1>
+      <div class="menu-opt">
+        <!--item 1-->
+        <div class="menu-item">
+          <img src="media/8.png" alt="expresso" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Expresso</p>
+            <p class="item-desc">18000 - 22000</p>
+          </div>
+        </div>
+        <!--item 2-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_CaffeAmericano.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="americano" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Americano</p>
+            <p class="item-desc">18000 - 22000</p>
+          </div>
+        </div>
+        <!--item 3-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_Cappuccino.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="cappuccino" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Cappuccino</p>
+            <p class="item-desc">20000 - 24000</p>
+          </div>
+        </div>
+        <!--item 4-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_CaffeLatte.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="latte" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Latte</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+        <!--item 5-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190528_WhiteChocolateMochaFrapp.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="mocha" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Mocha</p>
+            <p class="item-desc">22 000</p>
+          </div>
+        </div>
+        <!--item 6-->
+        <div class="menu-item">
+          <img src="https://t3.ftcdn.net/jpg/05/79/86/14/360_F_579861465_cTTcuOv6GlsyFencnVMcaFM7w6tQqiBk.jpg"
+            alt="chocolate river" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Chocolate River</p>
+            <p class="item-desc">25 000</p>
+          </div>
+        </div>
+        <!--item 7-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20230406_FlatWhite.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="flat white" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Flat White</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+        <!--item 8-->
+        <div class="menu-item">
+          <img src="https://sprudge.com/wp-content/uploads/2016/02/raf_plain-740x493.jpg" alt="Raf" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Raf</p>
+            <p class="item-desc">24 000</p>
+          </div>
+        </div>
+        <!--item 9-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_SignatureHotChocolate.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="cacao" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Cacao</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+        <!--item 10-->
+        <div class="menu-item">
+          <img
+            src="https://e0.pxfuel.com/wallpapers/665/518/desktop-wallpaper-starbucks-newest-frappuccino-caters-to-the-lactose-intolerant-frappe.jpg"
+            alt="frappuccino" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Frappuccino</p>
+            <p class="item-desc">30 000</p>
+          </div>
+        </div>
+        <!--item 11-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190607_IcedCaffeAmericano.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="ice americano" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Ice Americano</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+        <!--item 12-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_SignatureHotChocolate.jpg?impolicy=1by1_wide_topcrop_630https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_SignatureHotChocolate.jpg?impolicy=1by1_wide_topcrop_630"
+            alt="hot chocolate" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Hot Chocolate</p>
+            <p class="item-desc">22 000</p>
+          </div>
+        </div>
+        <!--item 13-->
+        <div class="menu-item">
+          <img src="https://www.starbucks.co.th/stb-media/2020/08/45.Iced-Cappuccino1080.png" alt="ice cappuccino"
+            class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Ice Cappuccino</p>
+            <p class="item-desc">22 000</p>
+          </div>
+        </div>
+        <!--item 14-->
+        <div class="menu-item">
+          <img src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Iced-Latte.jpeg"
+            alt="ice latte" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Ice Latte</p>
+            <p class="item-desc">22 000</p>
+          </div>
+        </div>
+        <!--item 15-->
+        <div class="menu-item">
+          <img src="https://www.starbucks.co.th/stb-media/2020/08/48.Affogato1080.png" alt="affogato" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Affogato</p>
+            <p class="item-desc">24 000</p>
+          </div>
+        </div>
+        <!--item 16-->
+        <div class="menu-item">
+          <img src="https://cdn.pixabay.com/photo/2018/04/08/14/46/red-bull-3301415_1280.jpg" alt="Redbull"
+            class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Redbull</p>
+            <p class="item-desc">27 000</p>
+          </div>
+        </div>
+        <!--item 17-->
+        <div class="menu-item">
+          <img src="https://www.starbucks.co.th/stb-media/2020/08/97.Green-Tea-Cream-Frappuccino1080.png"
+            alt="green tea" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Green Tea</p>
+            <p class="item-desc">10 000</p>
+          </div>
+        </div>
+        <!--item 18-->
+        <div class="menu-item">
+          <img
+            src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20181120_SausageEggCheddarSandwich.jpg?impolicy=1by1_medium_630"
+            alt="eggs with canadian sausage" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Eggs with Canadian Sauasage</p>
+            <p class="item-desc">27 000</p>
+          </div>
+        </div>
+        <!--item 19-->
+        <div class="menu-item">
+          <img
+            src="https://www.starbucks.co.th/stb-media/2022/02/Spring2022_Omelet-Sausage-Bistro-box-return-to-core.jpg"
+            alt="omelette" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Omelettte</p>
+            <p class="item-desc">27 000</p>
+          </div>
+        </div>
+        <!--item 20-->
+        <div class="menu-item">
+          <img src="https://wearenotmartha.com/wp-content/uploads/starbucks-egg-bites-6-2.jpg"
+            alt="omelette with vegetables" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Omelette with Vegetables</p>
+            <p class="item-desc">25 000</p>
+          </div>
+        </div>
+        <!--item 21-->
+        <div class="menu-item">
+          <img
+            src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/01/31/0/FPLF104_mary-berg-omelette-souffle-2_s4x3.jpg.rend.hgtvcom.511.288.suffix/1643648482482.jpeg"
+            alt="Coffee Item 21" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Omelette with Cheese</p>
+            <p class="item-desc">27 000</p>
+          </div>
+        </div>
+        <!--item 22-->
+        <div class="menu-item">
+          <img
+            src="https://media.glamour.com/photos/5695dd27d9dab9ff41b4a180/master/pass/health-fitness-2013-1-starbucks-oatmeal-main.jpg"
+            alt="oatmeal" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Oatmeal</p>
+            <p class="item-desc">22 000</p>
+          </div>
+        </div>
+        <!--item 23-->
+        <div class="menu-item">
+          <img src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Luxury-Fruit-Toast.png"
+            alt="toaster bread" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Toaster Bread</p>
+            <p class="item-desc">4 000</p>
+          </div>
+        </div>
+        <!--item 24-->
+        <div class="menu-item">
+          <img
+            src="https://www.starbucks.com.lb/sites/starbucks-lb/files/styles/c04_image_text_grid_600x600/public/2021-06/jor_classic_chicken_club_sandwich_01__1_.jpg.webp?itok=VMqx2d5Z"
+            alt="club sandwhich" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Club Sandwich</p>
+            <p class="item-desc">28 000</p>
+          </div>
+        </div>
+        <!--item 25-->
+        <div class="menu-item">
+          <img src="https://stories.starbucks.com/uploads/2020/03/SBX20200302-SpringFY20-SpinachFetaWrap_Spot1-1-1.jpg"
+            alt="vegan sandwhich" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Vegan Sandwich</p>
+            <p class="item-desc">27 000</p>
+          </div>
+        </div>
+        <!--item 26-->
+        <div class="menu-item">
+          <img src="https://img.freepik.com/premium-photo/classic-burger-bar_367038-2854.jpg" alt="classic burger"
+            class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Classic Burger</p>
+            <p class="item-desc">25 000</p>
+          </div>
+        </div>
+        <!--item 27-->
+        <div class="menu-item">
+          <img
+            src="https://png.pngtree.com/thumb_back/fh260/background/20230615/pngtree-a-photo-big-double-cheddar-cheeseburger-with-chicken-cutlet-image_3108377.jpg"
+            alt="cheeseburger" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Cheeseburger</p>
+            <p class="item-desc">30 000</p>
+          </div>
+        </div>
+        <!--item 28-->
+        <div class="menu-item">
+          <img src="https://bestbeefrecipes.com/wp-content/uploads/2021/06/egg-burger-featured.jpg"
+            alt="burger with eggs" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Burger with Eggs</p>
+            <p class="item-desc">30 000</p>
+          </div>
+        </div>
+        <!--item 29-->
+        <div class="menu-item">
+          <img
+            src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZXN8ZW58MHx8MHx8fDA%3D"
+            alt="french fries" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">French Fries</p>
+            <p class="item-desc">15 000</p>
+          </div>
+        </div>
+        <!--item 30-->
+        <div class="menu-item">
+          <img src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg"
+            alt="pizza" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Pizza</p>
+            <p class="item-desc">28 000</p>
+          </div>
+        </div>
+        <!--item 31-->
+        <div class="menu-item">
+          <img src="https://thecozyapron.com/wp-content/uploads/2019/08/cream-of-mushoom-soup_thecozyapron_1.jpg"
+            alt="mushroom soup" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Mushroom Soup</p>
+            <p class="item-desc">25 000</p>
+          </div>
+        </div>
+        <!--item 32-->
+        <div class="menu-item">
+          <img src="https://cookieandkate.com/images/2021/05/caesar-salad-in-bowl.jpg" alt="ceasar salad with chicken"
+            class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Ceasar Salad with Chicken</p>
+            <p class="item-desc">35 000</p>
+          </div>
+        </div>
+        <!--item 33-->
+        <div class="menu-item">
+          <img src="https://carlsbadcravings.com/wp-content/uploads/2021/09/greek-salad-main-recipe-500x500.jpg"
+            alt="greek salad" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Greek Salad</p>
+            <p class="item-desc">35 000</p>
+          </div>
+        </div>
+        <!--item 34-->
+        <div class="menu-item">
+          <img src="media/9.jpg" alt="brownie cake" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Brownie Cake</p>
+            <p class="item-desc">35 000</p>
+          </div>
+        </div>
+        <!--item 35-->
+        <div class="menu-item">
+          <img src="media/10.jpg" alt="chocolate cake" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Chocolate Cake</p>
+            <p class="item-desc">25 000</p>
+          </div>
+        </div>
+        <!--item 36-->
+        <div class="menu-item">
+          <img src="media/11.jpg" alt="cherry pie" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Cherry Pie</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+        <!--item 37-->
+        <div class="menu-item">
+          <img src="media/12.jpg" alt="chocolate pie" class="menu-img">
+          <div class="item-details">
+            <p class="item-price">Chocolate Pie</p>
+            <p class="item-desc">20 000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--drink rec based off of bday-->
+    <section class="parallax" style="background-image: url('media/13.jpg');">
+      <div class="section-content">
+        <div id="personal-recommendation">
+          <h2>Get a Recommendation Based on Your Birthday:</h2>
+          <form id="recommendation-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="birthday">Your Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required>
+
+            <button type="submit">Get Recommendation</button>
+          </form>
+
+          <div id="recommendation-result" style="display:none;">
+            <h3>Your Personalized Recommendation:</h3>
+            <p id="menu-item-recommendation"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--footer section-->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BookCafe</h3>
+        <p>Appreciate the little things.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <!--social media links-->
+        <h4>Follow Us</h4>
+        <ul class="socials">
+          <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en" class="fa fa-brands fa-instagram"></a></li>
+          <li><a
+              href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+              class="fa fa-brands fa-yelp"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 BookCafe | All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    //this gets whatever is submitted to the form 
+    document.getElementById('recommendation-form').onsubmit = function (event) {
+      event.preventDefault();
+
+      //stores the name and bday from form 
+      var name = document.getElementById('name').value;
+      var birthday = new Date(document.getElementById('birthday').value);
+
+      //stores into a placeholder
+      var recommendation = getMenuItemRecommendation(name, birthday);
+
+      //prints the result
+      document.getElementById('menu-item-recommendation').textContent = recommendation;
+      document.getElementById('recommendation-result').style.display = 'block';
+    };
+
+    //this function is where the magic works, the item is chosen based off of birthday
+    function getMenuItemRecommendation(name, birthday) {
+      var menuItems = [
+        "Expresso",
+        "Americano",
+        "Cappuccino",
+        "Latte",
+        "Mocha",
+        "Chocolate River",
+        "Flat White",
+        "Raf",
+        "Cacao",
+        "Frappuccino",
+        "Ice Americano",
+        "Hot Chocolate"
+      ];
+
+      var month = birthday.getMonth();
+      //modulus so that it's by birth month
+      var recommendedItem = menuItems[month % menuItems.length];
+
+      //function returns a statement/string
+      return `Based on your birthday, we recommend our delightful ${recommendedItem}!`;
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

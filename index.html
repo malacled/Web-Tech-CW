@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCafe - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--all the links-->
+    <link href="menu.html">
+    <link href="drinks.html">
+    <link href="food.html">
+    <link href="deals.html">
+    <link href="books.html">
+    <link href="about.html">
+    <link href="contact.html">
+    <!--style that only applies to this page-->
+    <style>
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 15px;
+            padding: 15px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery-pic {
+            overflow: hidden;
+        }
+
+        .gallery-pic img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-pic img:hover {
+            transform: scale(1.05);
+        }
+
+        /* for responsiveness */
+        @media (max-width: 600px) {
+            .gallery-item {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--header section-->
+    <header>
+        <nav>
+            <div class="nav-bookcafe"><a href="#">BookCafe</a></div>
+            <ul class="nav-items">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="menu.html">Menu</a>
+                    <div class="dropdown-options">
+                        <a href="drinks.html">Drinks</a>
+                        <a href="food.html">Food</a>
+                    </div>
+                </li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--main content-->
+    <main>
+        <!--slideshow-->
+        <div class="slideshow-container">
+            <div class="theslides fade">
+                <img src="media/7.jpg" style="width:100%">
+            </div>
+
+            <div class="theslides fade">
+                <img src="media/1.JPG" style="width:100%">
+            </div>
+
+            <div class="theslides fade">
+                <img src="media/4.jpeg" style="width:100%">
+            </div>
+
+            <div class="theslides fade">
+                <img src="media/2.jpg" style="width:100%">
+            </div>
+
+            <div class="theslides fade">
+                <img src="media/3.JPG" style="width:100%">
+            </div>
+
+            <!--buttons-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <!--about us-->
+        <section class="parallax" id="about" style="background-image: url('');">
+            <div class="section-content">
+                <h2>About Us</h2>
+                <p>Welcome to BookCafe, a haven for coffee enthusiasts and book lovers alike. Nestled in the heart of
+                    the city, our cozy café offers more than just a cup of coffee; it's a sanctuary for those seeking a
+                    quiet corner to work, read, and indulge in the simple pleasures of life.</p>
+                <a href="about.html" class="menu-link">Learn More</a>
+            </div>
+        </section>
+
+        <!--menu section-->
+        <section class="static-content" id="menu">
+            <div class="menu-section">
+            </div>
+            <h2>Our Menu</h2>
+            <p>
+            <pre>these are our current options in terms of food and drink. 
+                although BookCafe mainly serves as a place of study, 
+                we have the added perks of keeping your belly full while your mind whirs.</pre>
+            </p>
+            <div id="menu-container">
+                <div id="food-box" class="menu-box">
+                    <h2>Food</h2>
+                    <p>Check out the food selection available.</p>
+                    <a href="food.html" class="menu-link">Explore Food</a>
+                </div>
+                <div id="drinks-box" class="menu-box">
+                    <h2>Drinks</h2>
+                    <p>Quench your thirst with some quick refreshments.</p>
+                    <a href="drinks.html" class="menu-link">Explore Drinks</a>
+                </div>
+            </div>
+        </section>
+
+        <!--books parallax-->
+        <section class="parallax" id="books" style="background-image: url('media/5.jpg');">
+            <div class="section-content">
+                <h2>Our Books</h2>
+                <p>Explore the books available for reading when you decide to study, hang out, or just chill at
+                    BookCafe.</p>
+                <a href="books.html" class="menu-link">Book Options</a>
+            </div>
+        </section>
+
+        <!--gallery section-->
+        <section class="static-content" id="gallery">
+            <h2>Gallery</h2>
+            <section class="photo-gallery">
+                <div class="gallery-pic"><img
+                        src="https://c0.wallpaperflare.com/preview/452/100/984/restaurant-bar-coffee-shop.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://png.pngtree.com/background/20230519/original/pngtree-an-old-coffee-shop-with-very-dark-walls-picture-image_2652909.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://img.freepik.com/premium-photo/brews-coffee-coffee-shop-generative-ai_889131-610.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699401600&semt=ais"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-the-interior-of-a-coffee-shop-image_2577637.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img src="https://wallpaperaccess.com/full/9524787.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-3d-bg-interior-render-of-small-coffee-shop-style-restaurant-image_2577636.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://cutewallpaper.org/28/coffee-shop-aesthetic-wallpaper/2660717421.jpg"
+                        alt="dark academia coffee shop aesthetic picture">
+                </div>
+                <div class="gallery-pic"><img src="https://wallpaperaccess.com/full/8912610.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://e1.pxfuel.com/desktop-wallpaper/250/941/desktop-wallpaper-cozy-coffee-shop-ambience-with-relaxing-jazz-music-rain-sounds-and-crackling-fireplace-cozy-autumn-cafe-window.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+                <div class="gallery-pic"><img
+                        src="https://wallpapers.com/images/hd/brown-coffee-shop-interior-8y997pfkxvxdeg66.jpg"
+                        alt="dark academia coffee shop aesthetic picture"></div>
+            </section>
+        </section>
+
+        <!--learn more parallax-->
+        <section class="parallax" id="learn" style="background-image: url('media/6.jpg');">
+            <div class="section-content">
+                <h2>Learn More</h2>
+                <p>If you want to see similar cafes with a sort of bookish nerdy aesthetic to them, just click </p>
+                <a href="https://www.thedailymeal.com/travel/10-amazing-bookstore-caf-s-around-world-0/"
+                    class="menu-link">here</a>
+            </div>
+        </section>
+
+        <!--web tech requirement-->
+        <section class="parallax" id="about" style="background-image: url('');">
+            <div class="section-content">
+                <h2>Disclaimer</h2>
+                <p>This website was created to fulfill Web Technology module requirements and does not represent an
+                    actual company or service. Made by 00019257.</p>
+            </div>
+        </section>
+    </main>
+
+    <!--footer section-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BookCafe</h3>
+                <p>Appreciate the little things.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en"
+                            class="fa fa-brands fa-instagram"></a></li>
+                    <li><a href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+                            class="fa fa-brands fa-yelp"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BookCafe | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        //make the index for slides 1, so that the first picture will be displayed in the slideshow
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        //this is for the arrow controls of the slideshow (adds or subtracts from current slide)
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        //sets current slide corresponding to the number that passed in
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            //get all the elements with the class "theslides"
+            let slides = document.getElementsByClassName("theslides");
+            //if the slide is over the available amount, loop it 
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            // if the slides are less, set the index as the last slide
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            //hide the ones in slideshow
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            //display the slide corresponding to index (which is index-1 because computers start with 0)
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

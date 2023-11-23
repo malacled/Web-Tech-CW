@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCafe - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--all the links-->
+    <link href="index.html">
+    <link href="menu.html">
+    <link href="drinks.html">
+    <link href="food.html">
+    <link href="deals.html">
+    <link href="books.html">
+    <link href="about.html">
+    <link href="contact.html">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            color: #260e04;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* responsive */
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-bookcafe"><a href="index.html">BookCafe</a></div>
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="menu.html">Menu</a>
+                    <div class="dropdown-options">
+                        <a href="drinks.html">Drinks</a>
+                        <a href="food.html">Food</a>
+                    </div>
+                </li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1>Feedback Form</h1>
+            <form id="feedback-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="visit-date">Date of Visit:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BookCafe</h3>
+                <p>Appreciate the little things.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/bookcafetashkent/" class="fa fa-brands fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/bookcafetashkent/?hl=en"
+                            class="fa fa-brands fa-instagram"></a></li>
+                    <li><a href="https://www.tripadvisor.com/Restaurant_Review-g293968-d4028550-Reviews-BookCafe-Tashkent_Tashkent_Province.html"
+                            class="fa fa-brands fa-yelp"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BookCafe | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
